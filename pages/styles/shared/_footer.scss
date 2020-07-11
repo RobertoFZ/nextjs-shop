@@ -1,0 +1,80 @@
+.footer {
+  background-color: #1a1c1d;
+  color: #5d5d5d;
+  padding: 100px 0;
+
+  &__info {
+    background-color: #1a1c1d;
+    color: #5d5d5d;
+  }
+
+  &__signature_container {
+    display: flex;
+    padding: 25px 0;
+    background-color: #161819 !important;
+
+    img {
+      filter: brightness(0) invert(1);
+      max-width: 70px;
+      flex: 1;
+      margin-bottom: 20px;
+
+      @include for-tablet-landscape-up {
+        margin: 0;
+      }
+    }
+    p {
+      color: #5d5d5d;
+      flex: 1;
+      margin: 0;
+    }
+
+    ul {
+      display: block;
+      list-style: none;
+      padding: 0;
+
+      @include for-tablet-landscape-up {
+        display: inline-flex;
+      }
+
+      li {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        @include for-tablet-landscape-up {
+          text-align: left;
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+
+  &__section {
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: $weight-bold;
+  }
+
+  &__description {
+    margin-bottom: 40px;
+
+    span {
+      color: #ffffff;
+    }
+  }
+
+  &__social_media {
+    margin-top: 10px;
+    svg {
+      height: 30px;
+      width: 30px;
+      padding: 7px;
+      border: solid 2px #8c8686;
+      margin: 5px;
+    }
+  }
+}

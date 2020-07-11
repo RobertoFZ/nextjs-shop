@@ -1,0 +1,47 @@
+.single-section {
+  min-height: 100vh;
+  background-image: url("/assets/home/single_bg.jpg");
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include for-tablet-landscape-up {
+    background-position: center;
+  }
+
+  &__info {
+    padding: 0.8rem 1.8rem 3.8rem 5.3rem;
+  }
+  &__title {
+    font-size: 32px;
+    color: #ffffff;
+  }
+  &__description {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 40px;
+  }
+  &__section {
+    position: relative;
+    top: 3em;
+    left: -50px;
+    writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;
+    text-orientation: sideways-right;
+    transform: rotate(180deg);
+    margin: 0 !important;
+    color: $accent-color;
+
+    &::after {
+      background-color: $accent-color;
+      position: absolute;
+      height: 15px;
+      width: 1px;
+      content: "";
+      right: 50%;
+      top: -1.6em;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+
+@import "utils";
+@import "variables";
+
+// Shared Components
+@import "shared/container";
+@import "shared/navbar";
+@import "shared/line";
+@import "shared/appButton";
+@import "shared/footer";
+
+// Home Page
+@import "home/home";
+
+body {
+  font-family: $font-primary;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}

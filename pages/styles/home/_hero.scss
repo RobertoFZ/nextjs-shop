@@ -1,0 +1,97 @@
+.hero_section {
+  color: #ffffff;
+  background: #0c0c0c;
+  background-image: url("/assets/home/hero_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  min-height: 100vh;
+  display: flex;
+
+  @include for-tablet-landscape-up {
+    background-size: 110% 110%;
+    background-position: center center;
+    animation: shrink 5s infinite alternate;
+  }
+
+  &__title_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      color: #ffffff;
+      font-weight: $weight-bold;
+      font-size: $font-big;
+      line-height: 1.2;
+
+      @include for-phone-only {
+        font-size: 32px;
+      }
+
+      @include for-tablet-landscape-up {
+        font-size: $font-extra-big;
+      }
+    }
+  }
+  &__button {
+    color: #ffffff !important;
+    background: $accent-color !important;
+    border: none !important;
+    border-color: transparent !important;
+    border-radius: 0px !important;
+    height: auto !important;
+    line-height: 1.2 !important;
+    font-family: $font-primary !important;
+    font-weight: $weight-semibold !important;
+    padding: 20px 40px !important;
+    min-width: 170px !important;
+    margin: 10px 0 !important;
+    margin-right: 5px !important;
+    transition: all ease-in-out 0.3s;
+
+    @include for-tablet-landscape-up {
+      min-width: 170px;
+    }
+
+    &:hover {
+      background: transparent !important;
+      border: solid 1px #ffffff !important;
+    }
+  }
+  &__buttons_container {
+    text-align: center;
+
+    @include for-tablet-landscape-up {
+      text-align: left;
+    }
+
+    .hero_section__button:first-child {
+      @media (min-width: 375px) {
+        margin-right: 10px !important;
+      }
+      @include for-tablet-landscape-up {
+        margin-right: 25px;
+      }
+    }
+  }
+  &__social_media {
+    margin-top: 50px;
+    svg {
+      height: 40px;
+      width: 40px;
+      padding: 10px;
+      border: solid 1px #8c8686;
+      margin: 5px;
+    }
+  }
+
+  @keyframes shrink {
+    0% {
+      background-size: 110% 110%;
+    }
+    100% {
+      background-size: 100% 100%;
+    }
+  }
+}

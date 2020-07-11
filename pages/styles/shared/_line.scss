@@ -1,0 +1,16 @@
+.line {
+  margin: 0 25px;
+  height: 100%;
+
+  &__white {
+    border-left: 1px solid $white;
+  }
+
+  &-horizontal {
+    border-color: $white;
+  }
+
+  @include for-tablet-portrait-up {
+    margin: 0 15px;
+  }
+}

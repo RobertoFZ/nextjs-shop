@@ -1,0 +1,10 @@
+.home {
+  @import "hero";
+  @import "descriptionSection";
+  @import "services";
+  @import "singleSection";
+
+  &__sections {
+    padding: 100px 0;
+  }
+}

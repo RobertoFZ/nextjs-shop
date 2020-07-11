@@ -1,0 +1,79 @@
+$primary-color: #191b1c;
+$accent-color: #37abbd;
+$black: #212121;
+$white: #ffffff;
+$gray: #757575;
+$gradient: linear-gradient(45deg, #8121f7, #9200ff, #d800ff);
+$red: #ff0000;
+
+$font-primary: "Montserrat", sans-serif;
+$weight-light: 300;
+$weight-normal: 400;
+$weight-semibold: 500;
+$weight-bold: 600;
+
+$primary-text: #403535;
+$accent-text: $accent-color;
+$secondary-text: #8c8686;
+
+$font-normal: 16px;
+$font-medium: 24px;
+$font-big: 45px;
+$font-extra-big: 59px;
+
+// Animation Keyframes
+@-webkit-keyframes rainbow {
+  0% {
+    background-position: 0% 82%;
+  }
+
+  50% {
+    background-position: 100% 19%;
+  }
+
+  100% {
+    background-position: 0% 82%;
+  }
+}
+
+@-moz-keyframes rainbow {
+  0% {
+    background-position: 0% 82%;
+  }
+
+  50% {
+    background-position: 100% 19%;
+  }
+
+  100% {
+    background-position: 0% 82%;
+  }
+}
+
+@-o-keyframes rainbow {
+  0% {
+    background-position: 0% 82%;
+  }
+
+  50% {
+    background-position: 100% 19%;
+  }
+
+  100% {
+    background-position: 0% 82%;
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 82%;
+  }
+
+  50% {
+    background-position: 100% 19%;
+  }
+
+  100% {
+    background-position: 0% 82%;
+  }
+}

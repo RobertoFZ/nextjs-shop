@@ -1,0 +1,37 @@
+.description-section {
+  &__image {
+    width: 100%;
+  }
+  &__info {
+    padding: 0.8rem 1.8rem 3.8rem 5.3rem;
+  }
+  &__title {
+    font-size: $font-medium;
+    color: $primary-text;
+  }
+  &__description {
+    color: $secondary-text;
+    margin-bottom: 40px;
+  }
+  &__section {
+    position: absolute;
+    top: 1.9em;
+    left: 2.4em;
+    writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;
+    text-orientation: sideways-right;
+    transform: rotate(180deg);
+    margin: 0 !important;
+    color: $accent-color;
+
+    &::after {
+      background-color: $accent-color;
+      position: absolute;
+      height: 15px;
+      width: 1px;
+      content: "";
+      right: 50%;
+      top: -1.6em;
+    }
+  }
+}
