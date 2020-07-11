@@ -1,8 +1,5 @@
 import { Service } from '../Service/Service';
-import { Product } from './../Product/Product';
-import Reviews from '../../pages/reviews';
 import axios from 'axios';
-import { ReviewFormValues } from '../../pages/reviews/Reviews'
 
 export type Reviews = {
     id: number;

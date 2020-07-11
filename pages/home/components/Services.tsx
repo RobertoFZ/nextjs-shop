@@ -19,6 +19,7 @@ const Services = ({
 }: {
   services: HomeService[]
 }) => {
+  if (!services) return null;
   return (<div className='services'>
     <h2 className='services__title'>Nuestros servicios</h2>
     <Container>
