@@ -1,0 +1,42 @@
+.success {
+  padding: 100px 0;
+  &__subtitle {
+    color: $primary-color;
+    text-align: center;
+    font-size: 28px;
+
+    @include for-tablet-portrait-up {
+      margin: 3rem 0 2rem 0;
+    }
+  }
+  h3 {
+    span {
+      color: $accent-color;
+      font-size: 18px;
+    }
+  }
+  &__delivery_form,
+  &__purchase_info {
+    padding: 0 2rem;
+  }
+  &__card_button {
+    width: 100%;
+    margin: 1rem 0 5rem 0;
+  }
+
+  &__feedback {
+    text-align: center;
+
+    .ant-progress {
+      margin-top: 2rem;
+    }
+  }
+  &__loading_container {
+    text-align: center;
+    padding: 3rem 0;
+
+    @include for-desktop-up {
+      padding: 25vh 0;
+    }
+  }
+}

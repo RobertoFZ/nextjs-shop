@@ -99,11 +99,11 @@ class CreditCardForm extends Component<Props, State> {
         </Row>
         <Row gutter={16} className='card_form__actions'>
           <Col xs={12}>
-            <Button className='payment__card_button' shape='round' type='primary' htmlType='submit' loading={this.props.loading}>Confirmar compra</Button>
+            <Button className='payment__card_button' type='primary' htmlType='submit' loading={this.props.loading}>Confirmar compra</Button>
           </Col>
           <Col xs={12}>
             {
-              !this.props.loading && <Button className='payment__card_button' shape='round' type='default' onClick={() => this.props.onBackPressed()}>Verificar datos de envío</Button>
+              !this.props.loading && <Button className='payment__card_button' type='default' onClick={() => this.props.onBackPressed()}>Verificar datos de envío</Button>
             }
           </Col>
         </Row>

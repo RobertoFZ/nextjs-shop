@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react';
 import BaseLayout from '../shared/BaseLayout';
 import './../styles/app.scss';
 import { Row, Col, notification, Button, Progress, Divider } from 'antd';
-import { Product } from '../../api/Product/Product';
 import BaseMeta from '../shared/BaseMeta';
 import BaseHero from '../shared/BaseHero';
 import Container from '../shared/Container';
@@ -18,6 +17,13 @@ import PurchaseInfo from './components/PurchaseInfo';
 import DeliveryMethod from './components/DeliveryMethod';
 import { CreditCardOutlined } from '@ant-design/icons';
 import PackageModal from '../shared/PackageModal';
+
+declare global {
+  interface Window {
+    OpenPay: any;
+    $: any;
+  }
+}
 
 type Props = {
   router: NextRouter;
@@ -405,7 +411,7 @@ class Payment extends Component<Props, State> {
       <BaseMeta />
       <BaseHero title='Paga tu compra' backgroundImage='/assets/secondary-hero-bg.jpg' />
       <Container>
-        <Row className='payment' gutter={36}>
+        <Row className='payment' gutter={36} id='container'>
           <PackageModal show={showModal} packageItem={selectedPackage} onClose={this.handleModalOpen} />
 
           <Col xs={24} lg={14}>
