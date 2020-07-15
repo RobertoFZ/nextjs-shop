@@ -9,9 +9,11 @@
 @import "shared/line";
 @import "shared/appButton";
 @import "shared/footer";
+@import "shared/baseHero";
 
 // Home Page
 @import "home/home";
+@import "shop/shop";
 
 body {
   font-family: $font-primary;

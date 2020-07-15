@@ -1,0 +1,26 @@
+.base-hero {
+  $hero-height: 400px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: $hero-height;
+
+  &__overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: $hero-height;
+    padding-top: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    text-align: center;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 36px;
+  }
+}

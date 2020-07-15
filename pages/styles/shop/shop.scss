@@ -1,0 +1,8 @@
+.shop {
+  padding: 100px 0;
+
+  @import "categories";
+  @import "listOrder";
+  @import "productsList";
+  @import "productRow";
+}

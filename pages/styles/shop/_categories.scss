@@ -1,0 +1,44 @@
+.categories {
+  &__title {
+    font-size: 28px;
+    font-weight: 600;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "__";
+      font-family: Fontello;
+      bottom: -0.5em;
+      left: 0;
+      font-size: 0.8em;
+      font-weight: 400;
+      color: $accent-color;
+    }
+  }
+
+  &__list {
+    margin-top: 30px;
+    padding: 0;
+    padding-left: 20px;
+    list-style: none;
+    li {
+      cursor: pointer;
+      position: relative;
+      &::before {
+        content: "\2022";
+        color: $accent-color;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+        font-size: 14px;
+      }
+      &:hover {
+        color: $accent-color;
+      }
+    }
+    &-active {
+      font-weight: 600;
+      color: $accent-color;
+    }
+  }
+}

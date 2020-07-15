@@ -1,2 +1,2 @@
-import Category from './Category';
-export default Category;
+import CategoryService from './Category';
+export default CategoryService;

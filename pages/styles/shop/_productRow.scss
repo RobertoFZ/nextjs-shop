@@ -1,0 +1,40 @@
+.product {
+  &__image {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+  }
+  &__name {
+    cursor: pointer;
+    color: $primary-text;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    margin: 25px 0;
+    &:hover {
+      color: $accent-color;
+    }
+  }
+
+  &__description {
+    color: $secondary-text;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  &__price{
+    font-size: 22px;
+    text-align: center;
+    color: $accent-color;
+    font-weight: 600;
+  }
+}
