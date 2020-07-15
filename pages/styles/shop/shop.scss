@@ -1,6 +1,11 @@
 .shop {
   padding: 100px 0;
 
+  &__pagination {
+    padding: 20px 0;
+    text-align: center;
+  }
+
   @import "categories";
   @import "listOrder";
   @import "productsList";

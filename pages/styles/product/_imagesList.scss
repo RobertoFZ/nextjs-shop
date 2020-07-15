@@ -1,0 +1,33 @@
+.images_list {
+  list-style: none;
+  display: inline-flex;
+
+  @include for-desktop-up {
+    display: block;
+  }
+
+  li {
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    margin-right: 15px;
+
+    @include for-desktop-up {
+      margin-right: 0;
+    }
+  }
+
+  &__active {
+    border: solid;
+    border-width: 2px;
+    border-color: $primary-color;
+    box-shadow: 0 0 3px 2px rgba(100, 140, 255, 0.5);
+    border-radius: 2px;
+  }
+}

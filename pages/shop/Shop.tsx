@@ -4,7 +4,7 @@ import './../styles/app.scss';
 import BaseMeta from '../shared/BaseMeta';
 import BaseHero from '../shared/BaseHero';
 import Container from '../shared/Container';
-import { Row, Col, notification } from 'antd';
+import { Row, Col, notification, Pagination } from 'antd';
 import Categories from './components/Categories';
 import ListOrder from './components/ListOrder';
 import ProductsList from './components/ProductsList';
@@ -23,6 +23,7 @@ type State = {
   categories: Category[];
   selectedCategories: number[];
   loading: boolean;
+  order: string;
   products: {
     page: number;
     perPage: number;
@@ -36,6 +37,7 @@ class Shop extends Component<Props, State> {
     categories: [],
     selectedCategories: [],
     loading: false,
+    order: 'none',
     products: {
       page: 1,
       perPage: 12,
@@ -43,6 +45,7 @@ class Shop extends Component<Props, State> {
       data: [],
     }
   }
+
   componentDidMount() {
     this.getBusiness();
   }
@@ -64,11 +67,12 @@ class Shop extends Component<Props, State> {
   }
 
   getProducts = async () => {
-    let { business, products, selectedCategories } = this.state;
+    let { business, products, selectedCategories, order } = this.state;
     try {
       this.setState({ loading: true });
+      await new Promise((resolve) => setTimeout(() => resolve(), 1000));
       if (business) {
-        const response = await ProductService.list(products.page, products.perPage, 'desc', [business.id], selectedCategories);
+        const response = await ProductService.list(products.page, products.perPage, order, [business.id], selectedCategories);
         products.count = response.count;
         products.data = response.results;
         this.setState({ products });
@@ -103,8 +107,22 @@ class Shop extends Component<Props, State> {
     }
   }
 
+  onPageChange = (page: number) => {
+    const { products } = this.state;
+    products.page = page;
+    this.setState({ products }, () => this.getProducts());
+  }
+
+  onOrderChange = async (value: string) => {
+    try {
+      this.setState({ order: value === 'none' ? undefined : value }, () => this.getProducts());
+    } catch (error) {
+      notification.error({ message: 'Error', description: error.message });
+    }
+  }
+
   render() {
-    const { products, categories, selectedCategories, loading } = this.state;
+    const { products, categories, selectedCategories, loading, order } = this.state;
 
     return (<BaseLayout navbarTheme='dark'>
       <div>
@@ -117,8 +135,11 @@ class Shop extends Component<Props, State> {
                 <Categories categories={categories} onClick={this.onCategorySelected} selectedCategories={selectedCategories} />
               </Col>
               <Col xs={24} md={24} lg={16}>
-                <ListOrder />
+                <ListOrder onChange={this.onOrderChange} value={order} />
                 <ProductsList loading={loading} products={products.data} />
+                <div className='shop__pagination'>
+                  <Pagination total={products.count} pageSize={products.perPage} current={products.page} onChange={this.onPageChange} />
+                </div>
               </Col>
             </Row>
           </div>

@@ -1,0 +1,14 @@
+.product {
+  padding: 100px 0;
+
+  @import "productInfo";
+  @import "imagesList";
+  @import "productForm";
+
+  &__category {
+    span {
+      color: $accent-color;
+      font-weight: 600;
+    }
+  }
+}

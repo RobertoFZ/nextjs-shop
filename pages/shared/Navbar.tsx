@@ -59,6 +59,9 @@ const Navbar = ({
       <li>
         <a href={`tel:${process.env.supportPhone}`}><FontAwesomeIcon icon={faPhone} color='#ffffff' />{process.env.supportPhone}</a>
       </li>
+      <li>
+        <Link href='/cart'><img className='navbar__cart' src='/icons/shopping-bag.png' /></Link>
+      </li>
     </ul>
   </div>)
 };

@@ -17,6 +17,11 @@
     font-size: 18px;
     text-align: center;
     margin: 25px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
     &:hover {
       color: $accent-color;
     }
@@ -31,7 +36,7 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
   }
-  &__price{
+  &__price {
     font-size: 22px;
     text-align: center;
     color: $accent-color;

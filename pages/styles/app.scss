@@ -10,10 +10,14 @@
 @import "shared/appButton";
 @import "shared/footer";
 @import "shared/baseHero";
+@import "shared/zoomedImage";
 
 // Home Page
 @import "home/home";
+// Products List
 @import "shop/shop";
+// Single Product
+@import "product/product";
 
 body {
   font-family: $font-primary;
@@ -24,4 +28,7 @@ body {
 }
 .text-left {
   text-align: left;
+}
+.text-right {
+  text-align: right;
 }

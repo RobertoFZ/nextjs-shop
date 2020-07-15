@@ -9,10 +9,10 @@ const ProductRow = ({
   product: Product;
 }) => {
   return (<div className='product'>
-    <Link href={`/shop/${product.id}`}>
-      <div className='product__image' style={{ backgroundImage: `url(${product.images && product.images.length > 0 ? `${process.env.serverUrl}${product.images[0].image}` : '/logo.png'})` }}></div>
+    <Link href={`/shop/product/${product.id}`}>
+      <div className='product__image' style={{ backgroundImage: `url(${product.images && product.images.length > 0 ? `${process.env.serverUrl}${product.images[0].image}` : '/assets/default.png'})` }}></div>
     </Link>
-    <Link href={`/shop/${product.id}`}><p className='product__name'>{product.name}</p></Link>
+    <Link href={`/shop/product/${product.id}`}><p className='product__name'>{product.name}</p></Link>
     <p className='product__description'>{product.description}</p>
     <p className='product__price'>${formatMoney(product.price)}</p>
   </div>)

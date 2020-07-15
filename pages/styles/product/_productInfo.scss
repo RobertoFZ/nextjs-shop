@@ -1,0 +1,11 @@
+.product-info {
+  &__price {
+    color: $accent-color;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 25px;
+  }
+  &__description {
+    color: $secondary-text;
+  }
+}

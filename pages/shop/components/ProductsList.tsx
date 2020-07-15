@@ -11,10 +11,9 @@ const ProductsList = ({
   products?: Product[];
   loading?: boolean;
 }) => {
-  console.log(products)
-  return (<Row className='products-list'>
+  return (<Row className='products-list' gutter={36}>
     <Loader loading={loading} size='large' />
-    {products.map((product: Product) => <Col key={product.id} xs={8}>
+    {!loading && products.map((product: Product) => <Col key={product.id} xs={8}>
       <ProductRow product={product} />
     </Col>)}
   </Row>);

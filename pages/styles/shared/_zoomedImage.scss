@@ -1,0 +1,15 @@
+.zoom {
+  img {
+    width: 100%;
+  }
+  &__large_image {
+    display: none;
+
+    @include for-desktop-up {
+      display: initial;
+    }
+  }
+  &__large_preview{
+    width: 100%;
+  }
+}
