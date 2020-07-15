@@ -1,0 +1,45 @@
+.package-modal {
+  width: 90% !important;
+
+  @include for-tablet-landscape-up {
+    width: 60% !important;
+  }
+
+  &__table {
+    width: 100%;
+
+    thead {
+      tr th {
+        padding-bottom: 0.5rem;
+        text-transform: uppercase;
+      }
+    }
+
+    tbody {
+      border: 1px solid #e6e6e6;
+
+      tr:not(:first-child) {
+        border-top: 1px solid #e6e6e6;
+      }
+
+      tr td {
+        @include for-desktop-up {
+          font-size: 16px;
+        }
+      }
+
+      tr td:first-child {
+        padding: 1.5rem 0;
+      }
+    }
+
+    &__image {
+      margin: auto;
+      width: 70px;
+      height: 70px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}

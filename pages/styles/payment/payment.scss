@@ -1,0 +1,20 @@
+.payment {
+  padding: 100px 0;
+
+  @import "deliveryForm";
+  @import "creditCardForm";
+  @import "deliveryMethod";
+  @import "purchaseInfo";
+
+  &__paypal {
+    margin-top: 10px;
+  }
+  &__card_button {
+    width: 100%;
+  }
+  &__total {
+    font-weight: 600;
+    color: $accent-color;
+    margin-bottom: 25px;
+  }
+}

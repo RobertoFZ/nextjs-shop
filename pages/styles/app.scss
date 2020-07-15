@@ -11,6 +11,7 @@
 @import "shared/footer";
 @import "shared/baseHero";
 @import "shared/zoomedImage";
+@import "shared/packageModal";
 
 // Home Page
 @import "home/home";
@@ -20,6 +21,8 @@
 @import "product/product";
 // Shopping Cart
 @import "cart/cart";
+// Payment Page
+@import "payment/payment";
 
 body {
   font-family: $font-primary;

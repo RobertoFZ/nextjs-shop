@@ -1,0 +1,24 @@
+.card_form {
+  .ant-input {
+    padding: 0.5rem 0.5rem;
+  }
+  &__actions {
+    margin: 20px 0 40px 0;
+  }
+  &__provider_info {
+    text-align: center;
+
+    img {
+      width: 150px;
+    }
+  }
+  &__cards,
+  &__banks {
+    margin-top: 15px;
+    text-align: center;
+
+    img {
+      margin: 0 2px;
+    }
+  }
+}
