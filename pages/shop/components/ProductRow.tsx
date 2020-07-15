@@ -8,6 +8,7 @@ const ProductRow = ({
 }: {
   product: Product;
 }) => {
+  if (!product) return null;
   return (<div className='product'>
     <Link href={`/shop/product/${product.id}`}>
       <div className='product__image' style={{ backgroundImage: `url(${product.images && product.images.length > 0 ? `${process.env.serverUrl}${product.images[0].image}` : '/assets/default.png'})` }}></div>
