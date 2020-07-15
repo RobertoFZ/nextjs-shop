@@ -1,9 +1,9 @@
 import React from 'react';
 import { Button } from 'antd';
 import Container from '../../shared/Container';
-import Router from 'next/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import Link from 'next/link';
 
 const Hero = () => {
   return (<div className='hero_section'>
@@ -11,9 +11,11 @@ const Hero = () => {
       <Container>
         <h1>Instalación<br />y Mantenimiento<br />de Acuarios</h1>
         <div className='hero_section__buttons_container'>
-          <Button className='hero_section__button' type='primary' onClick={() => true}>
-            CONTÁCTANOS
+          <Link href='/shop'>
+            <Button className='hero_section__button' type='primary' onClick={() => true}>
+              IR A COMPRAR
           </Button>
+          </Link>
         </div>
         <div className='hero_section__social_media'>
           <a href='https://facebook.com' target='_blank'><FontAwesomeIcon icon={faFacebookF} color='#8c8686' /></a>

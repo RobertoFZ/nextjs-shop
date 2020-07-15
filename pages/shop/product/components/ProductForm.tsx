@@ -6,6 +6,7 @@ import { ProductVariant, Product } from '../../../../api/Product/Product';
 import { getUserCart, Cart, setUserCart } from '../../../../utils/common';
 import Router from 'next/router';
 import { withCookie, Cookie } from 'next-cookie';
+import Link from 'next/link';
 
 const Option = Select.Option;
 
@@ -123,7 +124,11 @@ class ProductForm extends Component<Props, State> {
         />
         <Button htmlType='submit' type='primary' disabled={variant && variant.use_stock && variant.stock === 0}>Agregar al carrito</Button>
       </div>
-      <Button type='primary' style={{ width: '100%' }}>Ir al carrito</Button>
+      <br/>
+      <br/>
+      <Link href='/cart'>
+        <Button type='primary' style={{ width: '100%' }}>Ir al carrito</Button>
+      </Link>
       {
         variant && variant.use_stock && variant.stock === 0 && <Alert
           message='No disponible'

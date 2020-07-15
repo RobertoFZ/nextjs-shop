@@ -1,0 +1,57 @@
+.products_table {
+  width: 100%;
+  min-width: 700px;
+
+  thead {
+    tr th {
+      padding-bottom: 2rem;
+      text-transform: uppercase;
+
+      @include for-desktop-up {
+        font-size: 16px;
+      }
+    }
+  }
+
+  tbody {
+    border: 1px solid #e6e6e6;
+
+    tr:not(:first-child) {
+      border-top: 1px solid #e6e6e6;
+    }
+
+    tr td {
+      @include for-desktop-up {
+        font-size: 16px;
+      }
+    }
+
+    tr td:first-child {
+      padding: 1.5rem 0;
+    }
+  }
+
+  &__remove{
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  &__image {
+    margin: auto;
+    width: 130px;
+    height: 130px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &__container {
+    width: 100%;
+    overflow-x: scroll;
+    margin: 4rem 0 2rem 0;
+
+    @include for-desktop-up {
+      overflow-x: initial;
+    }
+  }
+}

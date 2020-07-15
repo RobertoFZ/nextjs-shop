@@ -3,6 +3,10 @@
     color: $accent-color;
     font-size: 28px;
     font-weight: 600;
+  }
+  &__name {
+    font-size: 32px;
+    color: $accent-color;
     margin-bottom: 25px;
   }
   &__description {
