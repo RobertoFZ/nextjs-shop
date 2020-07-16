@@ -38,7 +38,18 @@ class Home extends Component {
     }]
     return (<BaseLayout navbarTheme='dark'>
       <div className={'home'} id='home'>
-        <BaseMeta />
+        <BaseMeta
+          title='Franzet | Acuario'
+          description='Todo para tu acuario al alcance de unos cuantos clicks.'
+          subject='Franzet | Acuario'
+          openGraph={{
+            title: 'Franzet | Acuario',
+            type: 'pets',
+            url: 'https://acuario.franzet.com',
+            image: `${process.env.applicationUrl}/logo.png`,
+            description: 'Todo para tu acuario al alcance de unos cuantos clicks.'
+          }}
+        />
         <Hero />
         <Container>
           <div className='home__sections'>

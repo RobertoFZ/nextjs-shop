@@ -67,7 +67,18 @@ class Success extends Component<Props, State> {
   render() {
     const { loading, order } = this.state;
     return (<BaseLayout navbarTheme='dark'>
-      <BaseMeta />
+      <BaseMeta
+        title='Franzet | Acuario'
+        description='Todo para tu acuario al alcance de unos cuantos clicks.'
+        subject='Franzet | Acuario'
+        openGraph={{
+          title: 'Franzet | Acuario',
+          type: 'pets',
+          url: 'https://acuario.franzet.com',
+          image: `${process.env.applicationUrl}/logo.png`,
+          description: 'Todo para tu acuario al alcance de unos cuantos clicks.'
+        }}
+      />
       <BaseHero title='Estatus del pago' backgroundImage='/assets/secondary-hero-bg.jpg' />
       <Container>
         {

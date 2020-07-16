@@ -57,6 +57,9 @@ const Navbar = ({
         <Link href='/about'><a>Nosotros</a></Link>
       </li>
       <li>
+        <Link href='/contact'><a>Contacto</a></Link>
+      </li>
+      <li>
         <a href={`tel:${process.env.supportPhone}`}><FontAwesomeIcon icon={faPhone} color='#ffffff' />{process.env.supportPhone}</a>
       </li>
       <li>

@@ -71,7 +71,18 @@ class Shop extends Component<Props, State> {
     if (!product) return null;
 
     return (<BaseLayout navbarTheme='dark'>
-      <BaseMeta />
+      <BaseMeta
+        title={product.name}
+        description={product.description}
+        subject={product.name}
+        openGraph={{
+          title: product.name,
+          type: 'pets',
+          url: `https://acuario.franzet.com/shop/product/${product.id}`,
+          image: product.images && product.images.length > 0 ? `${process.env.serverUrl}${product.images[0].image}` : `${process.env.applicationUrl}/logo.png`,
+          description: product.description
+        }}
+      />
       <BaseHero title={product.name} backgroundImage='/assets/secondary-hero-bg.jpg' />
       <Container>
         <div className={'product'} id='product'>

@@ -126,7 +126,18 @@ class Shop extends Component<Props, State> {
 
     return (<BaseLayout navbarTheme='dark'>
       <div>
-        <BaseMeta />
+        <BaseMeta
+          title='Franzet | Acuario'
+          description='Todo para tu acuario al alcance de unos cuantos clicks.'
+          subject='Franzet | Acuario'
+          openGraph={{
+            title: 'Franzet | Acuario',
+            type: 'pets',
+            url: 'https://acuario.franzet.com',
+            image: `${process.env.applicationUrl}/logo.png`,
+            description: 'Todo para tu acuario al alcance de unos cuantos clicks.'
+          }}
+        />
         <BaseHero title='Tienda' />
         <Container>
           <div className={'shop'} id='shop'>

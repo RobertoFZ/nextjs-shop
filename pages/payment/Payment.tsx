@@ -408,7 +408,18 @@ class Payment extends Component<Props, State> {
     } = this.state;
 
     return (<BaseLayout navbarTheme='dark'>
-      <BaseMeta />
+      <BaseMeta
+        title='Franzet | Acuario'
+        description='Todo para tu acuario al alcance de unos cuantos clicks.'
+        subject='Franzet | Acuario'
+        openGraph={{
+          title: 'Franzet | Acuario',
+          type: 'pets',
+          url: 'https://acuario.franzet.com',
+          image: `${process.env.applicationUrl}/logo.png`,
+          description: 'Todo para tu acuario al alcance de unos cuantos clicks.'
+        }}
+      />
       <BaseHero title='Paga tu compra' backgroundImage='/assets/secondary-hero-bg.jpg' />
       <Container>
         <Row className='payment' gutter={36} id='container'>

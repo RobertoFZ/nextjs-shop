@@ -13,7 +13,7 @@ const ProductsList = ({
 }) => {
   return (<Row className='products-list' gutter={36}>
     <Loader loading={loading} size='large' />
-    {!loading && products.map((product: Product) => <Col key={product.id} xs={8}>
+    {!loading && products.map((product: Product) => <Col key={product.id} xs={24} md={12} lg={8}>
       <ProductRow product={product} />
     </Col>)}
   </Row>);
