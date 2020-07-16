@@ -2,6 +2,7 @@ import React from 'react';
 import AppButton from '../../shared/AppButton';
 import Container from '../../shared/Container';
 import { Row, Col } from 'antd';
+import Link from 'next/link';
 
 const SingleSection = ({
   title,
@@ -24,7 +25,9 @@ const SingleSection = ({
             <p className='single-section__section'>{sectionText}</p>
             <h2 className='single-section__title'>{title}</h2>
             <p className='single-section__description'>{description}</p>
-            <AppButton>{actionText}</AppButton>
+            <Link href='/contact'>
+              <a><AppButton>{actionText}</AppButton></a>
+            </Link>
           </div>
         </Col>
       </Row>

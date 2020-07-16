@@ -54,7 +54,7 @@ const Navbar = ({
         <Link href='/shop'><a>Tienda</a></Link>
       </li>
       <li>
-        <Link href='/about'><a>Nosotros</a></Link>
+        <Link href='/about_us'><a>Nosotros</a></Link>
       </li>
       <li>
         <Link href='/contact'><a>Contacto</a></Link>

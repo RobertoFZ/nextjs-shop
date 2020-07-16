@@ -9,7 +9,7 @@ const DescriptionSection = ({
   sectionText,
   description,
   actionText,
-  actionLink = '/contact',
+  actionLink,
   orientation = 'right'
 }: {
   imageUrl: string;

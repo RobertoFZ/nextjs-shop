@@ -18,6 +18,7 @@ export type AppInputProps = {
   checkboxLink?: string;
   checkboxLinkText?: string;
   component?: any;
+  rows?: number;
 }
 
 const AppInput = (props: AppInputProps) => {
@@ -33,7 +34,8 @@ const AppInput = (props: AppInputProps) => {
     valuePropName = 'value',
     checkboxLink,
     checkboxLinkText,
-    component
+    component,
+    rows= 3,
   } = props;
 
   function getInputType() {
@@ -43,7 +45,7 @@ const AppInput = (props: AppInputProps) => {
       case 'checkbox':
         return <Checkbox onChange={(event: any) => onChange(event.target.checked)}>{checkboxText}{checkboxLink ? <a href={checkboxLink} target='_blank'>{checkboxLinkText}</a> : ''}</Checkbox>
       case 'textarea':
-        return <TextArea rows={3} onChange={(event: any) => onChange(event.target.value)} placeholder={placeholder} />
+        return <TextArea rows={rows} onChange={(event: any) => onChange(event.target.value)} placeholder={placeholder} />
       case 'money':
         return <InputNumber
           formatter={value => `$ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}

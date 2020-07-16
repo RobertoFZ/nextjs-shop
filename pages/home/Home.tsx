@@ -74,7 +74,7 @@ class Home extends Component {
         <SingleSection
           title='Especialista en acuarios a la medida, diseño en acuarios de lujo, instalación y mantenimiento.'
           description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et ullamcorper odio. Aliquam sit amet enim at nisi egestas bibendum pharetra et dui. Fusce suscipit, dui quis volutpat ultricies, turpis dolor consectetur metus, eget consequat sapien neque nec odio. Integer nec mauris at enim aliquam pulvinar quis in felis.'
-          actionText='Ver portafolio'
+          actionText='Contáctanos'
           sectionText='Visión'
         />
       </div>
