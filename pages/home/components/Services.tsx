@@ -30,8 +30,8 @@ const Services = ({
               <div className='services__service'>
                 <div className='services__service__link'>
                   <div className='services__service__link-href'>
-                    <Link href='/'>
-                      <FontAwesomeIcon icon={service.icon} color='#37abbd' />
+                    <Link href='/contact'>
+                      <a><FontAwesomeIcon icon={service.icon} color='#37abbd' /></a>
                     </Link>
                   </div>
                 </div>
